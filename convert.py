@@ -1,14 +1,26 @@
 import re
+import sys
 import requests
+import subprocess
 from colors import Color
 from datetime import date
-from ics import Calendar, Event
 
-url = open("cal_address.txt", "r").readlines()[0]
+try:
+    from ics import Calendar, Event
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+finally:
+    from ics import Calendar, Event
+# install required packages
+
+try:
+    url = open("cal_address.txt", "r").readlines()[0]
+except FileNotFoundError:
+    print("Please create \"cal_address.txt\" and copy your ics url into it")
+    sys.exit(1)
 
 txt = requests.get(url).text
 txt = re.sub(r"\bCLASS:PUBLIC\b", "CLASS:PRIVATE", txt)  # change class
-
 cal = Calendar(txt)
 new_cal = Calendar()
 
@@ -20,6 +32,7 @@ ACTION:DISPLAY
 DESCRIPTION:This is an event reminder
 TRIGGER:-P0DT0H5M0S
 END:VALARM"""
+
 
 def name_filter(string, lab=None):
     string = string.lower()
@@ -88,5 +101,3 @@ print(d)
 
 with open('new_cal.ics', 'w') as f:
     f.write(str(new_cal))
-
-
