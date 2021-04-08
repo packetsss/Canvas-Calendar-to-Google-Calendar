@@ -20,3 +20,5 @@ Note: Examples below are real courses.
   - AWP 4B Lecture
   - AWP 4B (A) Conference Attendance ` // (A) stands for Assignment`
   - MAE 3 (L) Lab Section A00, Firstname` // (L) stands for Lab`
+
+### Assignments will be notified 1 day before due date, lectures will be notified 5 mins before starting
