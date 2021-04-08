@@ -26,12 +26,19 @@ new_cal = Calendar()
 
 co = Color()
 d = {}
-alarm = """
+alarm5m = """
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:This is an event reminder
 TRIGGER:-P0DT0H5M0S
 END:VALARM"""
+alarm1d = """
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P1DT0H0M0S
+END:VALARM"""
+# Notify 5 minutes before event starts
 
 
 def name_filter(string, lab=None):
@@ -73,14 +80,17 @@ def change_sum(evt):
     if "exam" in line.lower() or "quiz" in line.lower() or "midterm" in line.lower() or "mid term" in line.lower() \
             or "final" in line.lower():
         line = re.sub(r"\bSUMMARY:\b([A-Z]{3,5}\s?([0-9]{1,3}[A-Z]?))", r"SUMMARY:\1 (Q)", line)
+        evt = re.sub(r'\bSUMMARY\b(.*)', rf"{line}\nCOLOR:{d[name]}{alarm5m}", evt)
     elif "assignment" in uid:
         line = re.sub(r"\bSUMMARY:\b([A-Z]{3,5}\s?([0-9]{1,3}[A-Z]?))", r"SUMMARY:\1 (A)", line)
+        evt = re.sub(r'\bSUMMARY\b(.*)', rf"{line}\nCOLOR:{d[name]}{alarm1d}", evt)
     elif "lab" in line.lower():
         line = re.sub(r"\bSUMMARY:\b([A-Z]{3,5}\s?([0-9]{1,3}[A-Z]?))", r"SUMMARY:\1 (L)", line)
+        evt = re.sub(r'\bSUMMARY\b(.*)', rf"{line}\nCOLOR:{d[name]}{alarm5m}", evt)
     else:
         line = re.sub(line, rf"SUMMARY:{name} Lecture", line)
+        evt = re.sub(r'\bSUMMARY\b(.*)', rf"{line}\nCOLOR:{d[name]}{alarm5m}", evt)
 
-    evt = re.sub(r'\bSUMMARY\b(.*)', rf"{line}\nCOLOR:{d[name]}{alarm}", evt)
     evt = re.sub(r"(\r|\.|,)", "", evt)
 
     return line, evt
