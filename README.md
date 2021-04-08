@@ -2,6 +2,10 @@
 ## Why Canvas Calendar to Google Calendar?
 - We are lazy people!! We don't want to manually type in all schedules and due dates by hand!!
 - Google Calendar is FREE!!!
+## Usage
+- Copy & paste your ics url into `cal_address.txt`
+- Run `convert.py`
+- import `new_cal.ics` to a calendar of your choice (preferably Google Calendar)
 ## Features
 ### Remove all redundant canvas events:
 - We don't like Office Hours bunch up in out Calendar!
@@ -22,7 +26,3 @@ Note: Examples below are real courses.
   - MAE 3 (L) Lab Section A00, Firstname` // (L) stands for Lab`
 
 #### Assignments will be notified 1 day before due date, lectures will be notified 5 mins before starting.
-## Usage
-- Copy & paste your ics url into `cal_address.txt`
-- Run `convert.py`
-- import `new_cal.ics` to a calendar of your choice (preferably Google Calendar)
