@@ -21,4 +21,8 @@ Note: Examples below are real courses.
   - AWP 4B (A) Conference Attendance ` // (A) stands for Assignment`
   - MAE 3 (L) Lab Section A00, Firstname` // (L) stands for Lab`
 
-### Assignments will be notified 1 day before due date, lectures will be notified 5 mins before starting.
+#### Assignments will be notified 1 day before due date, lectures will be notified 5 mins before starting.
+## Usage
+- Copy & paste your ics url into `cal_address.txt`
+- Run `convert.py`
+- import `new_cal.ics` to a calendar of your choice (preferably Google Calendar)
