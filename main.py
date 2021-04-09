@@ -14,7 +14,7 @@ class Calendar:
 class Name:
     def __init__(self):
         self.root = Tk()
-        self.url = open("cal_address.txt", "r").readlines()[0].replace("\n", "")
+        self.url = open("cal_address.txt", "r").readlines()[0].replace("\n", "")  # <-- paste your url here!
         self.txt = requests.get(self.url, stream=True)
         self.calendar = re.finditer(r"(BEGIN:VEVENT)(.*?)\s(.*?)\s(^END:VEVENT)", self.txt.text, re.DOTALL | re.M)
         self.filters = ["due", "lab"]
