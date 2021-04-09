@@ -14,6 +14,7 @@
 ### Optimized event names:
 Note: Examples below are real courses.
 - #### Before (Very unorganized):
+  - CL3 [COGS18_SP20_B00]
   - AWP 4B - 000 - Analytical Writing B - Lastname [SP20] [AWP4B_SP20_000
  ]
   - Conference Attendance (Week of Jan 0-Jan 32) [AWP4B_SP20_000]
@@ -21,8 +22,9 @@ Note: Examples below are real courses.
  A00]
   - Discussion Section B00 [MATH20D_SP20_B00]
 - #### After (Organized):
+  - COGS 18 (A) CL3    ` // (A) stands for Assignment`
   - AWP 4B Lecture
-  - AWP 4B (A) Conference Attendance ` // (A) stands for Assignment`
+  - AWP 4B (A) Conference Attendance 
   - MAE 3 Lab
   - MATH 20D Discussion
 
