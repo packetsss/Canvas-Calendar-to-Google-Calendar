@@ -3,13 +3,12 @@
 - We are lazy people!! We don't want to manually type in all schedules and due dates by hand!!
 - Google Calendar is FREE!!!
 ## Usage
-- Copy & paste your ics url into `cal_address.txt`
-- Run `convert.py`
-- import `new_cal.ics` to a calendar of your choice (preferably Google Calendar)
+- Copy & paste your ics url into `cal_address.txt` or just replace line 17 with your string url
+- Run `main.py`
+- import `optimized_calendar.ics` to a calendar of your choice (preferably Google Calendar)
 ## Features
 ### Remove all redundant canvas events:
 - We don't like Office Hours bunch up in out Calendar!
-- We don't like Discussion sessions and Lab sessions make everything else invisible to see!
 - So we get rid of them all!!
 
 ### Optimized event names:
@@ -20,9 +19,11 @@ Note: Examples below are real courses.
   - Conference Attendance (Week of Jan 0-Jan 32) [AWP4B_SP20_000]
   - MAE 3 - Lab Section A00\\, Firstname Lastname (Tue 00:00 am) [MAE3_SP20_
  A00]
+  - Discussion Section B00 [MATH20D_SP20_B00]
 - #### After (Organized):
   - AWP 4B Lecture
   - AWP 4B (A) Conference Attendance ` // (A) stands for Assignment`
-  - MAE 3 (L) Lab Section A00, Firstname` // (L) stands for Lab`
+  - MAE 3 Lab
+  - MATH 20D Discussion
 
-#### Assignments will be notified 1 day before due date, lectures will be notified 5 mins before starting.
+#### Assignments will be notified 1 day before due date, lectures, labs, and discussions will be notified 5 mins before starting.
