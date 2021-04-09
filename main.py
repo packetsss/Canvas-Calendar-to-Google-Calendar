@@ -1,9 +1,7 @@
-import re
 import requests
 from tkinter import *
-from colors import Color
 from datetime import date
-from convert import change_sum
+from convert_outdated import change_sum
 
 
 class Calendar:
