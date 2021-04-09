@@ -28,3 +28,4 @@ Note: Examples below are real courses.
   - MATH 20D Discussion
 
 #### Assignments will be notified 1 day before due date, lectures, labs, and discussions will be notified 5 mins before starting.
+#### All events before today will get trimmed off.
