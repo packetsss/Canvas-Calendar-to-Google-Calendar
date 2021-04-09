@@ -8,8 +8,7 @@
 - import `optimized_calendar.ics` to a calendar of your choice (preferably Google Calendar)
 ## Features
 ### Remove all redundant canvas events:
-- We don't like Office Hours bunch up in out Calendar!
-- So we get rid of them all!!
+- We don't like Office Hours bunch up in our Calendar!
 
 ### Optimized event names:
 Note: Examples below are real courses.
