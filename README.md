@@ -5,7 +5,7 @@
 ## Usage
 - Copy & paste your ics url into `cal_address.txt` or just replace line 17 with your string url
 - Run `main.py`
-- import `optimized_calendar.ics` to a calendar of your choice (preferably Google Calendar)
+- import `optimized_calendar.ics` to a calendar of your choice (only tested on Google Calendar)
 ## Features
 ### Remove all redundant canvas events:
 - We don't like Office Hours bunch up in our Calendar!
